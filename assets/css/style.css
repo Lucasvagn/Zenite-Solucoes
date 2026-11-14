@@ -200,10 +200,16 @@ body {
 }
 
 .hero-text h1 span {
+    display: inline-block; /* Garante que o fundo funcione no span */
     background: var(--primary-gradient);
-    -webkit-background-clip: text;
+    
+    -webkit-background-clip: text; /* O editor avisa sobre este... */
+    background-clip: text;         /* ...se você não colocar este logo abaixo! */
+    
     -webkit-text-fill-color: transparent;
 }
+
+
 
 .hero-text p {
     color: var(--text-muted);
